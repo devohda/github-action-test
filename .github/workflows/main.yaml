@@ -1,12 +1,14 @@
-name: 'Manual Release'
+name: 'My First Github Actions'
 
 on: 
-  workflow_dispatch:
-    inputs:
-      title:
-        type: string
-        required: true
-        description: Title of release
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
