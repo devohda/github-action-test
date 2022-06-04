@@ -67,7 +67,7 @@ jobs:
           mv artifacts/api/apiapp.zip artifacts/apiapp.zip
 
       - name: Release artifact to Github
-        uses: marvinpinto/action-automatic-release@latest
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: $${{ secrets.GITHUB_TOKEN }}
           prerelease: false
