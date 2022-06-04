@@ -22,3 +22,9 @@ jobs:
         shell: bash
         run: |
           echo "value: ${{ steps.first.outputs.first_value }}"
+
+      - name: Check github secret
+        id: third
+        shell: bash
+        run: |
+          echo "secret: ${{ secrets.HELLO }}"
